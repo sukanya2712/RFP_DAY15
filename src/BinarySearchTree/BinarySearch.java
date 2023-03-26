@@ -24,15 +24,6 @@ public class BinarySearch <T extends Comparable<T>>{
             currentPointer.NextRN= newNode;
     }
 
-    public void traverse(INode<T> currentPointer){
-        if (currentPointer == null)
-            return;
-        traverse(currentPointer.NextLN);
-        System.out.print(currentPointer.data+" ");
-        traverse(currentPointer.NextRN);
-    }
 
-    public void display(){
-        traverse(root);
-    }
+
 }
