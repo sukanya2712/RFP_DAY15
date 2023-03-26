@@ -3,6 +3,7 @@ package BinarySearchTree;
 public class BinarySearch <T extends Comparable<T>>{
     INode<T> root;
 
+    //uc1
     public void add(T data){
         INode<T> newNode = new INode<>(data);
         if(root == null) {
