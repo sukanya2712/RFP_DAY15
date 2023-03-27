@@ -1,8 +1,10 @@
 package BinarySearchTree;
 
+import java.util.Arrays;
+
 public class BinarySearch <T extends Comparable<T>>{
     INode<T> root;
-
+     INode<T> currentPointer;
     //uc1
     public void add(T data){
         INode<T> newNode = new INode<>(data);
@@ -24,6 +26,24 @@ public class BinarySearch <T extends Comparable<T>>{
             currentPointer.NextRN= newNode;
     }
 
+    public void search(T data){
 
+
+        while(currentPointer!=null) {
+            int value= data.compareTo(currentPointer.data);
+            switch (value){
+                case -1:
+                    currentPointer = currentPointer.NextLN;
+                    break;
+                case 1:
+                    currentPointer = currentPointer.NextRN;
+                    break;
+                default:
+                    System.out.println("Element Found!!!");
+                    return;
+            }
+        }
+        System.out.println("Element Not Found!!!");
+    }
 
 }
